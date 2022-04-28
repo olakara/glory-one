@@ -1,0 +1,18 @@
+version: "3"
+services:
+  expense-tacker:
+    container_name: expense
+    build:
+      dockerfile: Dockerfile
+      context: ./glory-expense-tracker
+    image: olakara/expense-tracker
+    ports:
+      - "3000:3000"
+  finance:
+    container_name: finance
+    build:
+      dockerfile: Dockerfile
+      context: ./glory-finance
+    image: olakara/finance
+    ports:
+      - "4000:4000"
