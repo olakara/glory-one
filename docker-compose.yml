@@ -16,3 +16,11 @@ services:
     image: olakara/finance
     ports:
       - "4000:4000"
+  notifications:
+    container_name: notifications
+    build:
+      dockerfile: Dockerfile
+      context: ./glory-notifications
+    image: olakara/notifications
+    ports:
+      - "5000:5000"
