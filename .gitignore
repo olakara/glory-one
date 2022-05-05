@@ -2,3 +2,5 @@ glory-expense-tracker
 glory-finance
 glory-notifications
 web
+mongo-volume
+rabbitmq-volume
