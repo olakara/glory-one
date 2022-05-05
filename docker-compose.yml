@@ -15,14 +15,14 @@ services:
     container_name: notification
     build:
       dockerfile: Dockerfile
-      context: ./glory-expense-tracker
-    image: olakara/expense-tracker
+      context: ./glory-notification
+    image: olakara/notification
     ports:
       - "5000:80"
     depends_on:
       - notification-db
       - rabbitmq
-  notification-db:
+  expense-db:
     container_name: expense-db
     image: mongo
     restart: always
@@ -30,7 +30,7 @@ services:
       - ../mongo-volume/expense-db:/data/db
     ports:
       - "27017:27017"
-  expense-db:
+  notification-db:
     container_name: expense-db
     image: mongo
     restart: always
@@ -46,4 +46,4 @@ services:
       - "5672:5672"
     volumes:
         - ../rabbitmq-volume/data:/var/lib/rabbitmq/
-        - ../rabbitmq-volume/log:/var/log/rabbitmq
+        - ../rabbitmq-volume/log:/var/log/rabbitmq/
