@@ -34,10 +34,11 @@ services:
     container_name: notification-db
     image: mongo
     restart: always
+    command: mongod --port 27072
     volumes:
       - ./mongo-volume/notification-db:/data/db
     ports:
-      - "27018:27017"
+      - "27072:27072"
   rabbitmq:
     container_name: my-rabbit
     image: rabbitmq:3-management

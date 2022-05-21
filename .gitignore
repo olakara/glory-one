@@ -6,3 +6,5 @@ glory-notifications
 web
 mongo-volume
 rabbitmq-volume
+postgres-volume
+mongo-volume-notifications
