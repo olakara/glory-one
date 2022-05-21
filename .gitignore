@@ -1,6 +1,4 @@
-glory-expense-integrator
 glory-expense-tracker
-glory-finance-integrator
 glory-finance
 glory-notifications
 web
@@ -8,3 +6,4 @@ mongo-volume
 rabbitmq-volume
 postgres-volume
 mongo-volume-notifications
+postgres-volumne
